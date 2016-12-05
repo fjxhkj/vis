@@ -1,9 +1,29 @@
-JavaScript: true
-Ruby: false
-Python: false
-PHP: false
+engines:
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+  fixme:
+    enabled: true
+  gnu-complexity:
+    enabled: true
+  markdownlint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+
+ratings:
+  paths:
+  - lib/**
+  - "**.js"
+  - misc/**
+  - "**.md"
 
 exclude_paths:
-- "docs/"
-- "examples/"
-- "misc/"
+- "dist/**/*"
+- "docs/**/*"
+- "examples/**/*"
+- "test/**/*"
